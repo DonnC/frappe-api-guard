@@ -2,13 +2,19 @@
 
 Frappe Api Guard - control api endpoints access
 
+This project came to light due to the need to control rest api endpoint access.
+
+In frappe, anyone can access the endpoints of any app or doctype, I wanted a way to control what is exposed to the calling clients.
+
+![pic](shot.png)
+
 ### Installation
 
 You can install this app using the [bench](https://github.com/frappe/bench) CLI:
 
 ```bash
 cd $PATH_TO_YOUR_BENCH
-bench get-app $URL_OF_THIS_REPO --branch develop
+bench get-app https://github.com/DonnC/fag.git --branch develop
 bench install-app fag
 ```
 

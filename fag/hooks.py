@@ -237,3 +237,6 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+auth_hooks = [
+	"fag.guard.endpoint_guard"
+]
