@@ -100,7 +100,6 @@ app_license = "mit"
 # Name of the app being installed is passed as an argument
 
 # before_app_install = "fag.utils.before_app_install"
-# after_app_install = "fag.utils.after_app_install"
 
 # Integration Cleanup
 # -------------------
@@ -237,6 +236,7 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
-auth_hooks = [
+after_app_install = "fag.guard.after_install"
+before_request = [
 	"fag.guard.endpoint_guard"
 ]

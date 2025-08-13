@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class AccessGuard(Document):
+class AllowedUser(Document):
 	pass

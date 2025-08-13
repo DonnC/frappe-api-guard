@@ -1,0 +1,144 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:FAG Policy {#####}",
+ "creation": "2025-08-13 08:16:10.979741",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "endpoint",
+  "allowed_users",
+  "allowed_roles",
+  "allowed_methods_section",
+  "method_get",
+  "column_break_uezb",
+  "method_post",
+  "column_break_qitv",
+  "method_delete",
+  "column_break_ksqn",
+  "method_put",
+  "column_break_rkdu",
+  "method_patch",
+  "column_break_ahop",
+  "method_any"
+ ],
+ "fields": [
+  {
+   "fieldname": "allowed_users",
+   "fieldtype": "Table MultiSelect",
+   "label": "Allowed Users",
+   "options": "Allowed User"
+  },
+  {
+   "fieldname": "allowed_roles",
+   "fieldtype": "Table MultiSelect",
+   "label": "Allowed Roles",
+   "options": "Allowed Role"
+  },
+  {
+   "fieldname": "allowed_methods_section",
+   "fieldtype": "Section Break",
+   "label": "Allowed Methods"
+  },
+  {
+   "default": "0",
+   "fieldname": "method_get",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "GET"
+  },
+  {
+   "default": "0",
+   "fieldname": "method_post",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "POST"
+  },
+  {
+   "fieldname": "column_break_uezb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_qitv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "method_delete",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "DELETE"
+  },
+  {
+   "fieldname": "column_break_ksqn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "method_put",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "PUT"
+  },
+  {
+   "fieldname": "column_break_rkdu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "method_patch",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "PATCH"
+  },
+  {
+   "fieldname": "column_break_ahop",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "method_any",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "ANY"
+  },
+  {
+   "description": "e.g /api/method/myapp.file.method",
+   "fieldname": "endpoint",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Endpoint"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-13 10:35:43.357538",
+ "modified_by": "Administrator",
+ "module": "FAG",
+ "name": "FAG Access Policy",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

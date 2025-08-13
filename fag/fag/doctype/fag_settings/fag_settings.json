@@ -1,35 +1,41 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2025-08-11 00:29:27.960334",
+ "creation": "2025-08-13 09:21:59.077950",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "enabled",
-  "endpoints"
+  "is_enabled",
+  "column_break_xtsa",
+  "throw_on_guard"
  ],
  "fields": [
   {
    "default": "0",
-   "fieldname": "enabled",
+   "fieldname": "is_enabled",
    "fieldtype": "Check",
    "label": "Enabled?"
   },
   {
-   "fieldname": "endpoints",
-   "fieldtype": "Table",
-   "label": "Whitelisted Endpoints",
-   "options": "Access Guard"
+   "fieldname": "column_break_xtsa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "description": "return 403 or throw exception on FAG encounter",
+   "fieldname": "throw_on_guard",
+   "fieldtype": "Check",
+   "label": "Throw Exception?"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2025-08-11 00:31:09.678422",
+ "modified": "2025-08-13 10:47:52.726921",
  "modified_by": "Administrator",
  "module": "FAG",
- "name": "Endpoint Guard",
+ "name": "FAG Settings",
  "owner": "Administrator",
  "permissions": [
   {
