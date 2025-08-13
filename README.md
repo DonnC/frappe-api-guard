@@ -86,7 +86,7 @@ Holds the **list of allowed API endpoints** and their basic restrictions:
 ## 🚀 Installation
 
 ```bash
-bench get-app https://github.com/DonnC/fag.git
+bench get-app https://github.com/DonnC/frappe-api-guard.git
 bench --site yoursite install-app fag
 bench restart
 ```
