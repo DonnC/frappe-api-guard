@@ -71,13 +71,13 @@ def _get_policies():
 
 
 def _deny_access(message: str, code:int=403):
-    throw_on_guard = frappe.get_single_value("FAG Settings", "throw_on_guard")
+    throw_on_guard = frappe.cint(frappe.get_single_value("FAG Settings", "throw_on_guard"))
 
     frappe.local.response["http_status_code"] = code
     frappe.local.response["message"] = frappe._(message)
     frappe.response.update(frappe.local.response)
     
-    if throw_on_guard:
+    if throw_on_guard == 1:
         frappe.throw(frappe._(message), frappe.PermissionError)
     
     # TODO: does this have any effect?? or can be passed down to the handling function
@@ -104,8 +104,9 @@ def endpoint_guard():
     if not (request_path.startswith("/api/method/") or request_path.startswith("/api/resource/")):
         return
 
-    if _is_desk_request(request_path) is True:
-        return
+    # TODO: they are already seeded by now, it gives control to the user if there are changes
+    # if _is_desk_request(request_path) is True:
+    #     return
 
     for policy in _get_policies():
         if fnmatch(request_path, policy["endpoint"]):
