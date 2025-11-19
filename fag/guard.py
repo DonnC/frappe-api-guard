@@ -127,7 +127,7 @@ def endpoint_guard():
     return _deny_access("Access denied!")
 
 
-def after_install():
+def after_install(*args, **kwargs):
     for ep in DESK_PATTERNS:
         if not frappe.db.exists("FAG Access Policy", {"endpoint": ep}):
             doc = frappe.get_doc({
